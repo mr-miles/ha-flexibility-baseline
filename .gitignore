@@ -1,0 +1,58 @@
+# --- Secrets -----------------------------------------------------------------
+# This component authenticates with an Octopus API key, from which a Kraken
+# token granting full account access is derived. Never commit either.
+.env
+.env.*
+secrets.yaml
+*.token
+token.txt
+.octopus-cookie
+credentials.json
+
+# --- Personal consumption data -----------------------------------------------
+# Half-hourly consumption is personal data, and the CSV format doc tells users
+# to create exactly these files (docs/csv-format.md). Scoped to those names
+# rather than *.csv so a genuine test fixture can still be committed; use
+# `git add -f` if you deliberately want one of these in the repo.
+consumption.csv
+events.csv
+results.csv
+export.csv
+/data/
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Environments ------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --- Tooling -----------------------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.hypothesis/
+
+# --- Editors and OS ----------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
